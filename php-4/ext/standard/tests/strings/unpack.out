@@ -1,0 +1,3 @@
+Warning: unpack() [/phpmanual/function.unpack.html]: Invalid format type - in /home/star/Desktop/php-history/php-4/ext/standard/tests/strings/unpack.php on line 2
+bool(false)
+Done

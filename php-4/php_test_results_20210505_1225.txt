@@ -1,0 +1,1034 @@
+
+=====================================================================
+FAILED TEST SUMMARY
+---------------------------------------------------------------------
+Handling of max_input_nesting_level being reached [tests/basic/027.phpt]
+money_format test [ext/standard/tests/strings/moneyformat.phpt]
+Invalid format type validation [ext/standard/tests/strings/unpack.phpt]
+Bug #27780 (strtotime(+1 xxx) returns a wrong date/time) [ext/standard/tests/time/bug27780.phpt]
+=====================================================================
+
+
+=====================================================================
+TEST RESULT SUMMARY
+---------------------------------------------------------------------
+Exts skipped    :   76
+Exts tested     :    9
+---------------------------------------------------------------------
+Number of tests :  643
+Tests skipped   :  271 (42.1%)
+Tests warned    :    0 (0.0%)
+Tests failed    :    4 (0.6%)
+Tests passed    :  368 (57.2%)
+---------------------------------------------------------------------
+Time taken      :   11 seconds
+=====================================================================
+
+
+================================================================================
+/home/star/Desktop/php-history/php-4/tests/basic/027.phpt
+================================================================================
+
+---- EXPECTED OUTPUT
+array(4) {
+  ["a"]=>
+  string(1) "1"
+  ["b"]=>
+  string(3) "ZYX"
+  ["d"]=>
+  string(3) "123"
+  ["e"]=>
+  array(1) {
+    [0]=>
+    array(1) {
+      [0]=>
+      string(1) "3"
+    }
+  }
+}
+string(124) "Unknown: Input variable nesting level exceeded 10. To increase the level change max_input_nesting_level in php.ini."
+---- ACTUAL OUTPUT
+array(5) {
+  ["a"]=>
+  string(1) "1"
+  ["b"]=>
+  string(3) "ZYX"
+  ["c"]=>
+  array(1) {
+    [0]=>
+    array(1) {
+      [0]=>
+      array(1) {
+        [0]=>
+        array(1) {
+          [0]=>
+          array(1) {
+            [0]=>
+            array(1) {
+              [0]=>
+              array(1) {
+                [0]=>
+                array(1) {
+                  [0]=>
+                  array(1) {
+                    [0]=>
+                    array(1) {
+                      [0]=>
+                      array(1) {
+                        [0]=>
+                        array(1) {
+                          [0]=>
+                          array(1) {
+                            [0]=>
+                            array(1) {
+                              [0]=>
+                              array(1) {
+                                [0]=>
+                                array(1) {
+                                  [0]=>
+                                  array(1) {
+                                    [0]=>
+                                    array(1) {
+                                      [0]=>
+                                      array(1) {
+                                        [0]=>
+                                        array(1) {
+                                          [0]=>
+                                          array(1) {
+                                            [0]=>
+                                            array(1) {
+                                              [0]=>
+                                              string(3) "123"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  ["d"]=>
+  string(3) "123"
+  ["e"]=>
+  array(1) {
+    [0]=>
+    array(1) {
+      [0]=>
+      string(1) "3"
+    }
+  }
+}
+NULL
+---- FAILED
+
+================================================================================
+001- array(4) {
+001+ array(5) {
+006-   ["d"]=>
+006+   ["c"]=>
+007-   string(3) "123"
+007+   array(1) {
+008-   ["e"]=>
+008+     [0]=>
+009-   array(1) {
+009+     array(1) {
+010-     [0]=>
+010+       [0]=>
+011-     array(1) {
+011+       array(1) {
+012-       [0]=>
+012+         [0]=>
+013-       string(1) "3"
+013+         array(1) {
+014-     }
+014+           [0]=>
+015-   }
+015+           array(1) {
+016- }
+016+             [0]=>
+017- string(124) "Unknown: Input variable nesting level exceeded 10. To increase the level change max_input_nesting_level in php.ini."
+017+             array(1) {
+018+               [0]=>
+019+               array(1) {
+020+                 [0]=>
+021+                 array(1) {
+022+                   [0]=>
+023+                   array(1) {
+024+                     [0]=>
+025+                     array(1) {
+026+                       [0]=>
+027+                       array(1) {
+028+                         [0]=>
+029+                         array(1) {
+030+                           [0]=>
+031+                           array(1) {
+032+                             [0]=>
+033+                             array(1) {
+034+                               [0]=>
+035+                               array(1) {
+036+                                 [0]=>
+037+                                 array(1) {
+038+                                   [0]=>
+039+                                   array(1) {
+040+                                     [0]=>
+041+                                     array(1) {
+042+                                       [0]=>
+043+                                       array(1) {
+044+                                         [0]=>
+045+                                         array(1) {
+046+                                           [0]=>
+047+                                           array(1) {
+048+                                             [0]=>
+049+                                             array(1) {
+050+                                               [0]=>
+051+                                               string(3) "123"
+052+                                             }
+053+                                           }
+054+                                         }
+055+                                       }
+056+                                     }
+057+                                   }
+058+                                 }
+059+                               }
+060+                             }
+061+                           }
+062+                         }
+063+                       }
+064+                     }
+065+                   }
+066+                 }
+067+               }
+068+             }
+069+           }
+070+         }
+071+       }
+072+     }
+073+   }
+074+   ["d"]=>
+075+   string(3) "123"
+076+   ["e"]=>
+077+   array(1) {
+078+     [0]=>
+079+     array(1) {
+080+       [0]=>
+081+       string(1) "3"
+082+     }
+083+   }
+084+ }
+085+ NULL
+================================================================================
+
+
+
+================================================================================
+/home/star/Desktop/php-history/php-4/ext/standard/tests/strings/moneyformat.phpt
+================================================================================
+
+---- EXPECTED OUTPUT
+string(7) "X$3.14Y"
+
+Warning: money_format() [/phpmanual/function.money-format.html]: Only a single %ci or %cn token can be used in %s on line %d
+bool(false)
+---- ACTUAL OUTPUT
+string(6) "X3.14Y"
+
+Warning: money_format() [/phpmanual/function.money-format.html]: Only a single %i or %n token can be used in /home/star/Desktop/php-history/php-4/ext/standard/tests/strings/moneyformat.php on line 4
+bool(false)
+---- FAILED
+
+================================================================================
+001- string(7) "X$3.14Y"
+001+ string(6) "X3.14Y"
+003- Warning: money_format() [/phpmanual/function.money-format.html]: Only a single %ci or %cn token can be used in %s on line %d
+003+ Warning: money_format() [/phpmanual/function.money-format.html]: Only a single %i or %n token can be used in /home/star/Desktop/php-history/php-4/ext/standard/tests/strings/moneyformat.php on line 4
+================================================================================
+
+
+
+================================================================================
+/home/star/Desktop/php-history/php-4/ext/standard/tests/strings/unpack.phpt
+================================================================================
+
+---- EXPECTED OUTPUT
+Warning: unpack(): Invalid format type - in %s/unpack.php on line %d
+bool(false)
+Done
+---- ACTUAL OUTPUT
+Warning: unpack() [/phpmanual/function.unpack.html]: Invalid format type - in /home/star/Desktop/php-history/php-4/ext/standard/tests/strings/unpack.php on line 2
+bool(false)
+Done
+---- FAILED
+
+================================================================================
+001- Warning: unpack(): Invalid format type - in %s/unpack.php on line %d
+001+ Warning: unpack() [/phpmanual/function.unpack.html]: Invalid format type - in /home/star/Desktop/php-history/php-4/ext/standard/tests/strings/unpack.php on line 2
+================================================================================
+
+
+
+================================================================================
+/home/star/Desktop/php-history/php-4/ext/standard/tests/time/bug27780.phpt
+================================================================================
+
+---- EXPECTED OUTPUT
+America/Chicago
+1076824799 [2004-02-14 23:59:59 CST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076824800 [2004-02-15 00:00:00 CST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076824801 [2004-02-15 00:00:01 CST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079503200 [2004-03-17 00:00:00 CST] [2004-04-07 00:00:00 -21 days]
+1080367200 [2004-03-27 00:00:00 CST] [2004-04-07 00:00:00 11 days ago]
+1080460800 [2004-03-28 02:00:00 CST] [2004-04-07 00:00:00 -10 day +2 hours]
+1081227600 [2004-04-06 00:00:00 CDT] [2004-04-07 00:00:00 -1 day]
+1081314000 [2004-04-07 00:00:00 CDT] [2004-04-07 00:00:00]
+1081317600 [2004-04-07 01:00:00 CDT] [2004-04-07 00:00:00 +1 hour]
+1081321200 [2004-04-07 02:00:00 CDT] [2004-04-07 00:00:00 +2 hour]
+1081400400 [2004-04-08 00:00:00 CDT] [2004-04-07 00:00:00 +1 day]
+1081400400 [2004-04-08 00:00:00 CDT] [2004-04-07 00:00:00 1 day]
+1083128400 [2004-04-28 00:00:00 CDT] [2004-04-07 00:00:00 +21 days]
+
+Europe/Amsterdam
+1076799599 [2004-02-14 23:59:59 CET] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076799600 [2004-02-15 00:00:00 CET] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076799601 [2004-02-15 00:00:01 CET] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079478000 [2004-03-17 00:00:00 CET] [2004-04-07 00:00:00 -21 days]
+1080342000 [2004-03-27 00:00:00 CET] [2004-04-07 00:00:00 11 days ago]
+1080435600 [2004-03-28 03:00:00 CEST] [2004-04-07 00:00:00 -10 day +2 hours]
+1081202400 [2004-04-06 00:00:00 CEST] [2004-04-07 00:00:00 -1 day]
+1081288800 [2004-04-07 00:00:00 CEST] [2004-04-07 00:00:00]
+1081292400 [2004-04-07 01:00:00 CEST] [2004-04-07 00:00:00 +1 hour]
+1081296000 [2004-04-07 02:00:00 CEST] [2004-04-07 00:00:00 +2 hour]
+1081375200 [2004-04-08 00:00:00 CEST] [2004-04-07 00:00:00 +1 day]
+1081375200 [2004-04-08 00:00:00 CEST] [2004-04-07 00:00:00 1 day]
+1083103200 [2004-04-28 00:00:00 CEST] [2004-04-07 00:00:00 +21 days]
+
+Asia/Jerusalem
+1076795999 [2004-02-14 23:59:59 IST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076796000 [2004-02-15 00:00:00 IST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076796001 [2004-02-15 00:00:01 IST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079474400 [2004-03-17 00:00:00 IST] [2004-04-07 00:00:00 -21 days]
+1080338400 [2004-03-27 00:00:00 IST] [2004-04-07 00:00:00 11 days ago]
+1080432000 [2004-03-28 02:00:00 IST] [2004-04-07 00:00:00 -10 day +2 hours]
+1081202400 [2004-04-06 00:00:00 IST] [2004-04-07 00:00:00 -1 day]
+1081288800 [2004-04-07 00:00:00 IST] [2004-04-07 00:00:00]
+1081292400 [2004-04-07 02:00:00 IDT] [2004-04-07 00:00:00 +1 hour]
+1081292400 [2004-04-07 02:00:00 IDT] [2004-04-07 00:00:00 +2 hour]
+1081371600 [2004-04-08 00:00:00 IDT] [2004-04-07 00:00:00 +1 day]
+1081371600 [2004-04-08 00:00:00 IDT] [2004-04-07 00:00:00 1 day]
+1083099600 [2004-04-28 00:00:00 IDT] [2004-04-07 00:00:00 +21 days]
+
+Asia/Singapore
+1076774399 [2004-02-14 23:59:59 SGT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076774400 [2004-02-15 00:00:00 SGT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076774401 [2004-02-15 00:00:01 SGT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079452800 [2004-03-17 00:00:00 SGT] [2004-04-07 00:00:00 -21 days]
+1080316800 [2004-03-27 00:00:00 SGT] [2004-04-07 00:00:00 11 days ago]
+1080410400 [2004-03-28 02:00:00 SGT] [2004-04-07 00:00:00 -10 day +2 hours]
+1081180800 [2004-04-06 00:00:00 SGT] [2004-04-07 00:00:00 -1 day]
+1081267200 [2004-04-07 00:00:00 SGT] [2004-04-07 00:00:00]
+1081270800 [2004-04-07 01:00:00 SGT] [2004-04-07 00:00:00 +1 hour]
+1081274400 [2004-04-07 02:00:00 SGT] [2004-04-07 00:00:00 +2 hour]
+1081353600 [2004-04-08 00:00:00 SGT] [2004-04-07 00:00:00 +1 day]
+1081353600 [2004-04-08 00:00:00 SGT] [2004-04-07 00:00:00 1 day]
+1083081600 [2004-04-28 00:00:00 SGT] [2004-04-07 00:00:00 +21 days]
+
+America/Sao_Paulo
+1076810399 [2004-02-14 23:59:59 BRST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076810400 [2004-02-14 23:00:00 BRT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076810401 [2004-02-14 23:00:01 BRT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079492400 [2004-03-17 00:00:00 BRT] [2004-04-07 00:00:00 -21 days]
+1080356400 [2004-03-27 00:00:00 BRT] [2004-04-07 00:00:00 11 days ago]
+1080450000 [2004-03-28 02:00:00 BRT] [2004-04-07 00:00:00 -10 day +2 hours]
+1081220400 [2004-04-06 00:00:00 BRT] [2004-04-07 00:00:00 -1 day]
+1081306800 [2004-04-07 00:00:00 BRT] [2004-04-07 00:00:00]
+1081310400 [2004-04-07 01:00:00 BRT] [2004-04-07 00:00:00 +1 hour]
+1081314000 [2004-04-07 02:00:00 BRT] [2004-04-07 00:00:00 +2 hour]
+1081393200 [2004-04-08 00:00:00 BRT] [2004-04-07 00:00:00 +1 day]
+1081393200 [2004-04-08 00:00:00 BRT] [2004-04-07 00:00:00 1 day]
+1083121200 [2004-04-28 00:00:00 BRT] [2004-04-07 00:00:00 +21 days]
+---- ACTUAL OUTPUT
+America/Chicago
+1076824799 [2004-02-14 23:59:59 CST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076824800 [2004-02-15 00:00:00 CST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076824801 [2004-02-15 00:00:01 CST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079503200 [2004-03-17 00:00:00 CST] [2004-04-07 00:00:00 -21 days]
+1080367200 [2004-03-27 00:00:00 CST] [2004-04-07 00:00:00 11 days ago]
+1080460800 [2004-03-28 02:00:00 CST] [2004-04-07 00:00:00 -10 day +2 hours]
+1081227600 [2004-04-06 00:00:00 CDT] [2004-04-07 00:00:00 -1 day]
+1081314000 [2004-04-07 00:00:00 CDT] [2004-04-07 00:00:00]
+1081317600 [2004-04-07 01:00:00 CDT] [2004-04-07 00:00:00 +1 hour]
+1081321200 [2004-04-07 02:00:00 CDT] [2004-04-07 00:00:00 +2 hour]
+1081400400 [2004-04-08 00:00:00 CDT] [2004-04-07 00:00:00 +1 day]
+1081400400 [2004-04-08 00:00:00 CDT] [2004-04-07 00:00:00 1 day]
+1083128400 [2004-04-28 00:00:00 CDT] [2004-04-07 00:00:00 +21 days]
+
+Europe/Amsterdam
+1076799599 [2004-02-14 23:59:59 CET] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076799600 [2004-02-15 00:00:00 CET] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076799601 [2004-02-15 00:00:01 CET] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079478000 [2004-03-17 00:00:00 CET] [2004-04-07 00:00:00 -21 days]
+1080342000 [2004-03-27 00:00:00 CET] [2004-04-07 00:00:00 11 days ago]
+1080435600 [2004-03-28 03:00:00 CEST] [2004-04-07 00:00:00 -10 day +2 hours]
+1081202400 [2004-04-06 00:00:00 CEST] [2004-04-07 00:00:00 -1 day]
+1081288800 [2004-04-07 00:00:00 CEST] [2004-04-07 00:00:00]
+1081292400 [2004-04-07 01:00:00 CEST] [2004-04-07 00:00:00 +1 hour]
+1081296000 [2004-04-07 02:00:00 CEST] [2004-04-07 00:00:00 +2 hour]
+1081375200 [2004-04-08 00:00:00 CEST] [2004-04-07 00:00:00 +1 day]
+1081375200 [2004-04-08 00:00:00 CEST] [2004-04-07 00:00:00 1 day]
+1083103200 [2004-04-28 00:00:00 CEST] [2004-04-07 00:00:00 +21 days]
+
+Asia/Jerusalem
+1076795999 [2004-02-14 23:59:59 IST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076796000 [2004-02-15 00:00:00 IST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076796001 [2004-02-15 00:00:01 IST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079474400 [2004-03-17 00:00:00 IST] [2004-04-07 00:00:00 -21 days]
+1080338400 [2004-03-27 00:00:00 IST] [2004-04-07 00:00:00 11 days ago]
+1080432000 [2004-03-28 02:00:00 IST] [2004-04-07 00:00:00 -10 day +2 hours]
+1081202400 [2004-04-06 00:00:00 IST] [2004-04-07 00:00:00 -1 day]
+1081288800 [2004-04-07 00:00:00 IST] [2004-04-07 00:00:00]
+1081292400 [2004-04-07 02:00:00 IDT] [2004-04-07 00:00:00 +1 hour]
+1081292400 [2004-04-07 02:00:00 IDT] [2004-04-07 00:00:00 +2 hour]
+1081371600 [2004-04-08 00:00:00 IDT] [2004-04-07 00:00:00 +1 day]
+1081371600 [2004-04-08 00:00:00 IDT] [2004-04-07 00:00:00 1 day]
+1083099600 [2004-04-28 00:00:00 IDT] [2004-04-07 00:00:00 +21 days]
+
+Asia/Singapore
+1076774399 [2004-02-14 23:59:59 +08] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076774400 [2004-02-15 00:00:00 +08] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076774401 [2004-02-15 00:00:01 +08] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079452800 [2004-03-17 00:00:00 +08] [2004-04-07 00:00:00 -21 days]
+1080316800 [2004-03-27 00:00:00 +08] [2004-04-07 00:00:00 11 days ago]
+1080410400 [2004-03-28 02:00:00 +08] [2004-04-07 00:00:00 -10 day +2 hours]
+1081180800 [2004-04-06 00:00:00 +08] [2004-04-07 00:00:00 -1 day]
+1081267200 [2004-04-07 00:00:00 +08] [2004-04-07 00:00:00]
+1081270800 [2004-04-07 01:00:00 +08] [2004-04-07 00:00:00 +1 hour]
+1081274400 [2004-04-07 02:00:00 +08] [2004-04-07 00:00:00 +2 hour]
+1081353600 [2004-04-08 00:00:00 +08] [2004-04-07 00:00:00 +1 day]
+1081353600 [2004-04-08 00:00:00 +08] [2004-04-07 00:00:00 1 day]
+1083081600 [2004-04-28 00:00:00 +08] [2004-04-07 00:00:00 +21 days]
+
+America/Sao_Paulo
+1076810399 [2004-02-14 23:59:59 -02] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+1076810400 [2004-02-14 23:00:00 -03] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+1076810401 [2004-02-14 23:00:01 -03] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+1079492400 [2004-03-17 00:00:00 -03] [2004-04-07 00:00:00 -21 days]
+1080356400 [2004-03-27 00:00:00 -03] [2004-04-07 00:00:00 11 days ago]
+1080450000 [2004-03-28 02:00:00 -03] [2004-04-07 00:00:00 -10 day +2 hours]
+1081220400 [2004-04-06 00:00:00 -03] [2004-04-07 00:00:00 -1 day]
+1081306800 [2004-04-07 00:00:00 -03] [2004-04-07 00:00:00]
+1081310400 [2004-04-07 01:00:00 -03] [2004-04-07 00:00:00 +1 hour]
+1081314000 [2004-04-07 02:00:00 -03] [2004-04-07 00:00:00 +2 hour]
+1081393200 [2004-04-08 00:00:00 -03] [2004-04-07 00:00:00 +1 day]
+1081393200 [2004-04-08 00:00:00 -03] [2004-04-07 00:00:00 1 day]
+1083121200 [2004-04-28 00:00:00 -03] [2004-04-07 00:00:00 +21 days]
+---- FAILED
+
+================================================================================
+047- 1076774399 [2004-02-14 23:59:59 SGT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+047+ 1076774399 [2004-02-14 23:59:59 +08] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+048- 1076774400 [2004-02-15 00:00:00 SGT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+048+ 1076774400 [2004-02-15 00:00:00 +08] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+049- 1076774401 [2004-02-15 00:00:01 SGT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+049+ 1076774401 [2004-02-15 00:00:01 +08] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+050- 1079452800 [2004-03-17 00:00:00 SGT] [2004-04-07 00:00:00 -21 days]
+050+ 1079452800 [2004-03-17 00:00:00 +08] [2004-04-07 00:00:00 -21 days]
+051- 1080316800 [2004-03-27 00:00:00 SGT] [2004-04-07 00:00:00 11 days ago]
+051+ 1080316800 [2004-03-27 00:00:00 +08] [2004-04-07 00:00:00 11 days ago]
+052- 1080410400 [2004-03-28 02:00:00 SGT] [2004-04-07 00:00:00 -10 day +2 hours]
+052+ 1080410400 [2004-03-28 02:00:00 +08] [2004-04-07 00:00:00 -10 day +2 hours]
+053- 1081180800 [2004-04-06 00:00:00 SGT] [2004-04-07 00:00:00 -1 day]
+053+ 1081180800 [2004-04-06 00:00:00 +08] [2004-04-07 00:00:00 -1 day]
+054- 1081267200 [2004-04-07 00:00:00 SGT] [2004-04-07 00:00:00]
+054+ 1081267200 [2004-04-07 00:00:00 +08] [2004-04-07 00:00:00]
+055- 1081270800 [2004-04-07 01:00:00 SGT] [2004-04-07 00:00:00 +1 hour]
+055+ 1081270800 [2004-04-07 01:00:00 +08] [2004-04-07 00:00:00 +1 hour]
+056- 1081274400 [2004-04-07 02:00:00 SGT] [2004-04-07 00:00:00 +2 hour]
+056+ 1081274400 [2004-04-07 02:00:00 +08] [2004-04-07 00:00:00 +2 hour]
+057- 1081353600 [2004-04-08 00:00:00 SGT] [2004-04-07 00:00:00 +1 day]
+057+ 1081353600 [2004-04-08 00:00:00 +08] [2004-04-07 00:00:00 +1 day]
+058- 1081353600 [2004-04-08 00:00:00 SGT] [2004-04-07 00:00:00 1 day]
+058+ 1081353600 [2004-04-08 00:00:00 +08] [2004-04-07 00:00:00 1 day]
+059- 1083081600 [2004-04-28 00:00:00 SGT] [2004-04-07 00:00:00 +21 days]
+059+ 1083081600 [2004-04-28 00:00:00 +08] [2004-04-07 00:00:00 +21 days]
+062- 1076810399 [2004-02-14 23:59:59 BRST] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+062+ 1076810399 [2004-02-14 23:59:59 -02] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +59 seconds]
+063- 1076810400 [2004-02-14 23:00:00 BRT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+063+ 1076810400 [2004-02-14 23:00:00 -03] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +60 seconds]
+064- 1076810401 [2004-02-14 23:00:01 BRT] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+064+ 1076810401 [2004-02-14 23:00:01 -03] [2004-04-07 00:00:00 -2 months +7 days +23 hours +59 minutes +61 seconds]
+065- 1079492400 [2004-03-17 00:00:00 BRT] [2004-04-07 00:00:00 -21 days]
+065+ 1079492400 [2004-03-17 00:00:00 -03] [2004-04-07 00:00:00 -21 days]
+066- 1080356400 [2004-03-27 00:00:00 BRT] [2004-04-07 00:00:00 11 days ago]
+066+ 1080356400 [2004-03-27 00:00:00 -03] [2004-04-07 00:00:00 11 days ago]
+067- 1080450000 [2004-03-28 02:00:00 BRT] [2004-04-07 00:00:00 -10 day +2 hours]
+067+ 1080450000 [2004-03-28 02:00:00 -03] [2004-04-07 00:00:00 -10 day +2 hours]
+068- 1081220400 [2004-04-06 00:00:00 BRT] [2004-04-07 00:00:00 -1 day]
+068+ 1081220400 [2004-04-06 00:00:00 -03] [2004-04-07 00:00:00 -1 day]
+069- 1081306800 [2004-04-07 00:00:00 BRT] [2004-04-07 00:00:00]
+069+ 1081306800 [2004-04-07 00:00:00 -03] [2004-04-07 00:00:00]
+070- 1081310400 [2004-04-07 01:00:00 BRT] [2004-04-07 00:00:00 +1 hour]
+070+ 1081310400 [2004-04-07 01:00:00 -03] [2004-04-07 00:00:00 +1 hour]
+071- 1081314000 [2004-04-07 02:00:00 BRT] [2004-04-07 00:00:00 +2 hour]
+071+ 1081314000 [2004-04-07 02:00:00 -03] [2004-04-07 00:00:00 +2 hour]
+072- 1081393200 [2004-04-08 00:00:00 BRT] [2004-04-07 00:00:00 +1 day]
+072+ 1081393200 [2004-04-08 00:00:00 -03] [2004-04-07 00:00:00 +1 day]
+073- 1081393200 [2004-04-08 00:00:00 BRT] [2004-04-07 00:00:00 1 day]
+073+ 1081393200 [2004-04-08 00:00:00 -03] [2004-04-07 00:00:00 1 day]
+074- 1083121200 [2004-04-28 00:00:00 BRT] [2004-04-07 00:00:00 +21 days]
+074+ 1083121200 [2004-04-28 00:00:00 -03] [2004-04-07 00:00:00 +21 days]
+================================================================================
+
+
+
+
+================================================================================
+BUILD ENVIRONMENT
+================================================================================
+OS:
+Linux - Linux star-A 5.4.0-72-generic #80~18.04.1-Ubuntu SMP Mon Apr 12 23:26:25 UTC 2021 x86_64
+
+Automake:
+automake (GNU automake) 1.15.1
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <http://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+
+Autoconf:
+autoconf (GNU Autoconf) 2.69
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+/Autoconf: GNU GPL version 3 or later
+<http://gnu.org/licenses/gpl.html>, <http://gnu.org/licenses/exceptions.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by David J. MacKenzie and Akim Demaille.
+
+Libtool:
+ltmain.sh (GNU libtool) 1.4.3 (1.922.2.111 2002/10/23 02:54:36)
+
+Compiler:
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.5.0-3ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+
+Bison:
+bison (GNU Bison) 3.0.4
+由 Robert Corbett 和 Richard Stallman 编写。
+
+版权所有 (C) 2015 Free Software Foundation, Inc.
+本程序是自由软件；请参看源代码的版权声明。本软件不提供任何担保；
+包括没有适销性和某一专用目的下的适用性担保。
+
+Libraries:
+	linux-vdso.so.1 (0x00007ffef0583000)
+	libcrypt.so.1 => /lib/x86_64-linux-gnu/libcrypt.so.1 (0x00007f87347af000)
+	libresolv.so.2 => /lib/x86_64-linux-gnu/libresolv.so.2 (0x00007f8734594000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f87341f6000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f8733ff2000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f8733c01000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f8734db5000)
+
+
+
+================================================================================
+PHPINFO
+================================================================================
+phpinfo()
+PHP Version => 4.4.9
+
+System => Linux star-A 5.4.0-72-generic #80~18.04.1-Ubuntu SMP Mon Apr 12 23:26:25 UTC 2021 x86_64
+Build Date => May  5 2021 12:24:16
+Configure Command =>  './configure'
+Server API => Command Line Interface
+Virtual Directory Support => disabled
+Configuration File (php.ini) Path => /usr/local/lib
+PHP API => 20020918
+PHP Extension => 20020429
+Zend Extension => 20050606
+Debug Build => no
+Zend Memory Manager => enabled
+Thread Safety => disabled
+Registered PHP Streams => php, http, ftp  
+
+
+This program makes use of the Zend Scripting Language Engine:
+Zend Engine v1.3.0, Copyright (c) 1998-2004 Zend Technologies
+
+
+ _______________________________________________________________________
+
+
+Configuration
+
+PHP Core
+
+Directive => Local Value => Master Value
+allow_call_time_pass_reference => On => On
+allow_url_fopen => On => On
+always_populate_raw_post_data => Off => Off
+arg_separator.input => & => &
+arg_separator.output => & => &
+asp_tags => Off => Off
+auto_append_file => no value => no value
+auto_prepend_file => no value => no value
+browscap => no value => no value
+default_charset => no value => no value
+default_mimetype => text/html => text/html
+define_syslog_variables => Off => Off
+disable_classes => no value => no value
+disable_functions => no value => no value
+display_errors => On => On
+display_startup_errors => Off => Off
+doc_root => no value => no value
+docref_ext => no value => no value
+docref_root => no value => no value
+enable_dl => On => On
+error_append_string => no value => no value
+error_log => no value => no value
+error_prepend_string => no value => no value
+error_reporting => no value => no value
+expose_php => On => On
+extension_dir => /usr/local/lib/php/extensions/no-debug-non-zts-20020429 => /usr/local/lib/php/extensions/no-debug-non-zts-20020429
+file_uploads => On => On
+gpc_order => GPC => GPC
+highlight.bg => #FFFFFF => #FFFFFF
+highlight.comment => #FF8000 => #FF8000
+highlight.default => #0000BB => #0000BB
+highlight.html => #000000 => #000000
+highlight.keyword => #007700 => #007700
+highlight.string => #DD0000 => #DD0000
+html_errors => Off => On
+ignore_repeated_errors => Off => Off
+ignore_repeated_source => Off => Off
+ignore_user_abort => Off => Off
+implicit_flush => On => Off
+include_path => .:/usr/local/lib/php => .:/usr/local/lib/php
+log_errors => Off => Off
+log_errors_max_len => 1024 => 1024
+magic_quotes_gpc => On => On
+magic_quotes_runtime => Off => Off
+magic_quotes_sybase => Off => Off
+max_execution_time => 0 => 30
+max_input_nesting_level => 500 => 500
+max_input_time => -1 => -1
+open_basedir => no value => no value
+output_buffering => 0 => 0
+output_handler => no value => no value
+post_max_size => 8M => 8M
+precision => 14 => 14
+register_argc_argv => On => On
+register_globals => Off => Off
+report_memleaks => On => On
+safe_mode => Off => Off
+safe_mode_exec_dir => /usr/local/php/bin => /usr/local/php/bin
+safe_mode_gid => Off => Off
+safe_mode_include_dir => no value => no value
+sendmail_from => no value => no value
+sendmail_path => /usr/sbin/sendmail -t -i  => /usr/sbin/sendmail -t -i 
+serialize_precision => 100 => 100
+short_open_tag => On => On
+SMTP => localhost => localhost
+smtp_port => 25 => 25
+sql.safe_mode => Off => Off
+track_errors => Off => Off
+unserialize_callback_func => no value => no value
+upload_max_filesize => 2M => 2M
+upload_tmp_dir => no value => no value
+user_dir => no value => no value
+variables_order => no value => no value
+xmlrpc_error_number => 0 => 0
+xmlrpc_errors => Off => Off
+y2k_compliance => On => On
+
+ctype
+
+ctype functions => enabled
+
+mysql
+
+MySQL Support => enabled
+Active Persistent Links => 0
+Active Links => 0
+Client API version => 3.23.49
+MYSQL_MODULE_TYPE => builtin
+MYSQL_SOCKET => /var/lib/mysql/mysql.sock
+MYSQL_INCLUDE =>  
+MYSQL_LIBS =>  
+
+Directive => Local Value => Master Value
+mysql.allow_persistent => On => On
+mysql.connect_timeout => 60 => 60
+mysql.default_host => no value => no value
+mysql.default_password => no value => no value
+mysql.default_port => no value => no value
+mysql.default_socket => no value => no value
+mysql.default_user => no value => no value
+mysql.max_links => Unlimited => Unlimited
+mysql.max_persistent => Unlimited => Unlimited
+mysql.trace_mode => Off => Off
+
+overload
+
+User-Space Object Overloading Support => enabled
+
+pcre
+
+PCRE (Perl Compatible Regular Expressions) Support => enabled
+PCRE Library Version => 7.7 2008-05-07
+
+posix
+
+Revision => $Revision: 1.51.2.4.2.4 $
+
+session
+
+Session Support => enabled
+Registered save handlers => files user 
+
+Directive => Local Value => Master Value
+session.auto_start => Off => Off
+session.bug_compat_42 => On => On
+session.bug_compat_warn => On => On
+session.cache_expire => 180 => 180
+session.cache_limiter => nocache => nocache
+session.cookie_domain => no value => no value
+session.cookie_lifetime => 0 => 0
+session.cookie_path => / => /
+session.cookie_secure => Off => Off
+session.entropy_file => no value => no value
+session.entropy_length => 0 => 0
+session.gc_divisor => 100 => 100
+session.gc_maxlifetime => 1440 => 1440
+session.gc_probability => 1 => 1
+session.name => PHPSESSID => PHPSESSID
+session.referer_check => no value => no value
+session.save_handler => files => files
+session.save_path => /tmp => /tmp
+session.serialize_handler => php => php
+session.use_cookies => On => On
+session.use_only_cookies => Off => Off
+session.use_trans_sid => Off => Off
+
+standard
+
+Regex Library => Bundled library enabled
+Dynamic Library Support => enabled
+Path to sendmail => /usr/sbin/sendmail -t -i 
+
+Directive => Local Value => Master Value
+assert.active => 1 => 1
+assert.bail => 0 => 0
+assert.callback => no value => no value
+assert.quiet_eval => 0 => 0
+assert.warning => 1 => 1
+auto_detect_line_endings => 0 => 0
+default_socket_timeout => 60 => 60
+safe_mode_allowed_env_vars => PHP_ => PHP_
+safe_mode_protected_env_vars => LD_LIBRARY_PATH => LD_LIBRARY_PATH
+url_rewriter.tags => a=href,area=href,frame=src,form=,fieldset= => a=href,area=href,frame=src,form=,fieldset=
+user_agent => no value => no value
+
+tokenizer
+
+Tokenizer Support => enabled
+
+xml
+
+XML Support => active
+XML Namespace Support => active
+EXPAT Version => 1.95.6
+
+Additional Modules
+
+Module Name
+
+Environment
+
+Variable => Value
+CLUTTER_IM_MODULE => xim
+LS_COLORS => rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LC_MEASUREMENT => zh_CN.UTF-8
+LESSCLOSE => /usr/bin/lesspipe %s %s
+LC_PAPER => zh_CN.UTF-8
+LC_MONETARY => zh_CN.UTF-8
+TEST_PHP_SRCDIR => /home/star/Desktop/php-history/php-4
+XDG_MENU_PREFIX => gnome-
+_ => /home/star/Desktop/php-history/php-4/sapi/cli/php
+LANG => zh_CN.UTF-8
+DISPLAY => :0
+OLDPWD => /home/star/Desktop/php-history
+GNOME_SHELL_SESSION_MODE => ubuntu
+COLORTERM => truecolor
+MAKE_TERMOUT => /dev/pts/1
+USERNAME => star
+XDG_VTNR => 2
+SSH_AUTH_SOCK => /run/user/1000/keyring/ssh
+MFLAGS =>  
+CC => gcc
+LC_NAME => zh_CN.UTF-8
+XDG_SESSION_ID => 4
+USER => root
+DESKTOP_SESSION => ubuntu
+QUERY_STRING =>  
+QT4_IM_MODULE => fcitx
+TEXTDOMAINDIR => /usr/share/locale/
+GNOME_TERMINAL_SCREEN => /org/gnome/Terminal/screen/bd424b74_d4c9_42c2_b526_33f6459b54c2
+SCRIPT_FILENAME =>  
+PWD => /home/star/Desktop/php-history/php-4
+HOME => /root
+TEXTDOMAIN => im-config
+SSH_AGENT_PID => 2715
+QT_ACCESSIBILITY => 1
+XDG_SESSION_TYPE => x11
+XDG_DATA_DIRS => /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+CONTENT_TYPE =>  
+REDIRECT_STATUS =>  
+XDG_SESSION_DESKTOP => ubuntu
+LC_ADDRESS => zh_CN.UTF-8
+GJS_DEBUG_OUTPUT => stderr
+LC_NUMERIC => zh_CN.UTF-8
+GTK_MODULES => gail:atk-bridge
+MAIL => /var/mail/root
+PAPERSIZE => a4
+WINDOWPATH => 2
+REQUEST_METHOD =>  
+SHELL => /bin/bash
+VTE_VERSION => 5202
+TERM => xterm-256color
+QT_IM_MODULE => fcitx
+XMODIFIERS => @im=fcitx
+IM_CONFIG_PHASE => 2
+XDG_CURRENT_DESKTOP => ubuntu:GNOME
+GPG_AGENT_INFO => /run/user/1000/gnupg/S.gpg-agent:0:1
+GNOME_TERMINAL_SERVICE => :1.85
+MAKELEVEL => 1
+PATH_TRANSLATED =>  
+XDG_SEAT => seat0
+SHLVL => 4
+LANGUAGE => zh_CN:en_US:en
+MAKE_TERMERR => /dev/pts/1
+LC_TELEPHONE => zh_CN.UTF-8
+GDMSESSION => ubuntu
+GNOME_DESKTOP_SESSION_ID => this-is-deprecated
+LOGNAME => root
+DBUS_SESSION_BUS_ADDRESS => unix:path=/run/user/1000/bus
+XDG_RUNTIME_DIR => /run/user/0
+XAUTHORITY => /run/user/1000/gdm/Xauthority
+XDG_CONFIG_DIRS => /etc/xdg/xdg-ubuntu:/etc/xdg
+PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LC_IDENTIFICATION => zh_CN.UTF-8
+MAKEFLAGS =>  
+GJS_DEBUG_TOPICS => JS ERROR;JS LOG
+SESSION_MANAGER => local/star-A:@/tmp/.ICE-unix/2630,unix/star-A:/tmp/.ICE-unix/2630
+TEST_PHP_EXECUTABLE => /home/star/Desktop/php-history/php-4/sapi/cli/php
+CONTENT_LENGTH =>  
+LESSOPEN => | /usr/bin/lesspipe %s
+GTK_IM_MODULE => fcitx
+LC_TIME => zh_CN.UTF-8
+
+PHP Variables
+
+Variable => Value
+_SERVER["CLUTTER_IM_MODULE"] => xim
+_SERVER["LS_COLORS"] => rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+_SERVER["LC_MEASUREMENT"] => zh_CN.UTF-8
+_SERVER["LESSCLOSE"] => /usr/bin/lesspipe %s %s
+_SERVER["LC_PAPER"] => zh_CN.UTF-8
+_SERVER["LC_MONETARY"] => zh_CN.UTF-8
+_SERVER["TEST_PHP_SRCDIR"] => /home/star/Desktop/php-history/php-4
+_SERVER["XDG_MENU_PREFIX"] => gnome-
+_SERVER["_"] => /home/star/Desktop/php-history/php-4/sapi/cli/php
+_SERVER["LANG"] => zh_CN.UTF-8
+_SERVER["DISPLAY"] => :0
+_SERVER["OLDPWD"] => /home/star/Desktop/php-history
+_SERVER["GNOME_SHELL_SESSION_MODE"] => ubuntu
+_SERVER["COLORTERM"] => truecolor
+_SERVER["MAKE_TERMOUT"] => /dev/pts/1
+_SERVER["USERNAME"] => star
+_SERVER["XDG_VTNR"] => 2
+_SERVER["SSH_AUTH_SOCK"] => /run/user/1000/keyring/ssh
+_SERVER["MFLAGS"] => 
+_SERVER["CC"] => gcc
+_SERVER["LC_NAME"] => zh_CN.UTF-8
+_SERVER["XDG_SESSION_ID"] => 4
+_SERVER["USER"] => root
+_SERVER["DESKTOP_SESSION"] => ubuntu
+_SERVER["QUERY_STRING"] => 
+_SERVER["QT4_IM_MODULE"] => fcitx
+_SERVER["TEXTDOMAINDIR"] => /usr/share/locale/
+_SERVER["GNOME_TERMINAL_SCREEN"] => /org/gnome/Terminal/screen/bd424b74_d4c9_42c2_b526_33f6459b54c2
+_SERVER["SCRIPT_FILENAME"] => 
+_SERVER["PWD"] => /home/star/Desktop/php-history/php-4
+_SERVER["HOME"] => /root
+_SERVER["TEXTDOMAIN"] => im-config
+_SERVER["SSH_AGENT_PID"] => 2715
+_SERVER["QT_ACCESSIBILITY"] => 1
+_SERVER["XDG_SESSION_TYPE"] => x11
+_SERVER["XDG_DATA_DIRS"] => /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+_SERVER["CONTENT_TYPE"] => 
+_SERVER["REDIRECT_STATUS"] => 
+_SERVER["XDG_SESSION_DESKTOP"] => ubuntu
+_SERVER["LC_ADDRESS"] => zh_CN.UTF-8
+_SERVER["GJS_DEBUG_OUTPUT"] => stderr
+_SERVER["LC_NUMERIC"] => zh_CN.UTF-8
+_SERVER["GTK_MODULES"] => gail:atk-bridge
+_SERVER["MAIL"] => /var/mail/root
+_SERVER["PAPERSIZE"] => a4
+_SERVER["WINDOWPATH"] => 2
+_SERVER["REQUEST_METHOD"] => 
+_SERVER["SHELL"] => /bin/bash
+_SERVER["VTE_VERSION"] => 5202
+_SERVER["TERM"] => xterm-256color
+_SERVER["QT_IM_MODULE"] => fcitx
+_SERVER["XMODIFIERS"] => @im=fcitx
+_SERVER["IM_CONFIG_PHASE"] => 2
+_SERVER["XDG_CURRENT_DESKTOP"] => ubuntu:GNOME
+_SERVER["GPG_AGENT_INFO"] => /run/user/1000/gnupg/S.gpg-agent:0:1
+_SERVER["GNOME_TERMINAL_SERVICE"] => :1.85
+_SERVER["MAKELEVEL"] => 1
+_SERVER["PATH_TRANSLATED"] => 
+_SERVER["XDG_SEAT"] => seat0
+_SERVER["SHLVL"] => 4
+_SERVER["LANGUAGE"] => zh_CN:en_US:en
+_SERVER["MAKE_TERMERR"] => /dev/pts/1
+_SERVER["LC_TELEPHONE"] => zh_CN.UTF-8
+_SERVER["GDMSESSION"] => ubuntu
+_SERVER["GNOME_DESKTOP_SESSION_ID"] => this-is-deprecated
+_SERVER["LOGNAME"] => root
+_SERVER["DBUS_SESSION_BUS_ADDRESS"] => unix:path=/run/user/1000/bus
+_SERVER["XDG_RUNTIME_DIR"] => /run/user/0
+_SERVER["XAUTHORITY"] => /run/user/1000/gdm/Xauthority
+_SERVER["XDG_CONFIG_DIRS"] => /etc/xdg/xdg-ubuntu:/etc/xdg
+_SERVER["PATH"] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+_SERVER["LC_IDENTIFICATION"] => zh_CN.UTF-8
+_SERVER["MAKEFLAGS"] => 
+_SERVER["GJS_DEBUG_TOPICS"] => JS ERROR;JS LOG
+_SERVER["SESSION_MANAGER"] => local/star-A:@/tmp/.ICE-unix/2630,unix/star-A:/tmp/.ICE-unix/2630
+_SERVER["TEST_PHP_EXECUTABLE"] => /home/star/Desktop/php-history/php-4/sapi/cli/php
+_SERVER["CONTENT_LENGTH"] => 
+_SERVER["LESSOPEN"] => | /usr/bin/lesspipe %s
+_SERVER["GTK_IM_MODULE"] => fcitx
+_SERVER["LC_TIME"] => zh_CN.UTF-8
+_SERVER["PHP_SELF"] => 
+_SERVER["SCRIPT_NAME"] => 
+_SERVER["DOCUMENT_ROOT"] => 
+_SERVER["argv"] => Array
+(
+)
+
+_SERVER["argc"] => 0
+_ENV["CLUTTER_IM_MODULE"] => xim
+_ENV["LS_COLORS"] => rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+_ENV["LC_MEASUREMENT"] => zh_CN.UTF-8
+_ENV["LESSCLOSE"] => /usr/bin/lesspipe %s %s
+_ENV["LC_PAPER"] => zh_CN.UTF-8
+_ENV["LC_MONETARY"] => zh_CN.UTF-8
+_ENV["TEST_PHP_SRCDIR"] => /home/star/Desktop/php-history/php-4
+_ENV["XDG_MENU_PREFIX"] => gnome-
+_ENV["_"] => /home/star/Desktop/php-history/php-4/sapi/cli/php
+_ENV["LANG"] => zh_CN.UTF-8
+_ENV["DISPLAY"] => :0
+_ENV["OLDPWD"] => /home/star/Desktop/php-history
+_ENV["GNOME_SHELL_SESSION_MODE"] => ubuntu
+_ENV["COLORTERM"] => truecolor
+_ENV["MAKE_TERMOUT"] => /dev/pts/1
+_ENV["USERNAME"] => star
+_ENV["XDG_VTNR"] => 2
+_ENV["SSH_AUTH_SOCK"] => /run/user/1000/keyring/ssh
+_ENV["MFLAGS"] => 
+_ENV["CC"] => gcc
+_ENV["LC_NAME"] => zh_CN.UTF-8
+_ENV["XDG_SESSION_ID"] => 4
+_ENV["USER"] => root
+_ENV["DESKTOP_SESSION"] => ubuntu
+_ENV["QUERY_STRING"] => 
+_ENV["QT4_IM_MODULE"] => fcitx
+_ENV["TEXTDOMAINDIR"] => /usr/share/locale/
+_ENV["GNOME_TERMINAL_SCREEN"] => /org/gnome/Terminal/screen/bd424b74_d4c9_42c2_b526_33f6459b54c2
+_ENV["SCRIPT_FILENAME"] => 
+_ENV["PWD"] => /home/star/Desktop/php-history/php-4
+_ENV["HOME"] => /root
+_ENV["TEXTDOMAIN"] => im-config
+_ENV["SSH_AGENT_PID"] => 2715
+_ENV["QT_ACCESSIBILITY"] => 1
+_ENV["XDG_SESSION_TYPE"] => x11
+_ENV["XDG_DATA_DIRS"] => /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+_ENV["CONTENT_TYPE"] => 
+_ENV["REDIRECT_STATUS"] => 
+_ENV["XDG_SESSION_DESKTOP"] => ubuntu
+_ENV["LC_ADDRESS"] => zh_CN.UTF-8
+_ENV["GJS_DEBUG_OUTPUT"] => stderr
+_ENV["LC_NUMERIC"] => zh_CN.UTF-8
+_ENV["GTK_MODULES"] => gail:atk-bridge
+_ENV["MAIL"] => /var/mail/root
+_ENV["PAPERSIZE"] => a4
+_ENV["WINDOWPATH"] => 2
+_ENV["REQUEST_METHOD"] => 
+_ENV["SHELL"] => /bin/bash
+_ENV["VTE_VERSION"] => 5202
+_ENV["TERM"] => xterm-256color
+_ENV["QT_IM_MODULE"] => fcitx
+_ENV["XMODIFIERS"] => @im=fcitx
+_ENV["IM_CONFIG_PHASE"] => 2
+_ENV["XDG_CURRENT_DESKTOP"] => ubuntu:GNOME
+_ENV["GPG_AGENT_INFO"] => /run/user/1000/gnupg/S.gpg-agent:0:1
+_ENV["GNOME_TERMINAL_SERVICE"] => :1.85
+_ENV["MAKELEVEL"] => 1
+_ENV["PATH_TRANSLATED"] => 
+_ENV["XDG_SEAT"] => seat0
+_ENV["SHLVL"] => 4
+_ENV["LANGUAGE"] => zh_CN:en_US:en
+_ENV["MAKE_TERMERR"] => /dev/pts/1
+_ENV["LC_TELEPHONE"] => zh_CN.UTF-8
+_ENV["GDMSESSION"] => ubuntu
+_ENV["GNOME_DESKTOP_SESSION_ID"] => this-is-deprecated
+_ENV["LOGNAME"] => root
+_ENV["DBUS_SESSION_BUS_ADDRESS"] => unix:path=/run/user/1000/bus
+_ENV["XDG_RUNTIME_DIR"] => /run/user/0
+_ENV["XAUTHORITY"] => /run/user/1000/gdm/Xauthority
+_ENV["XDG_CONFIG_DIRS"] => /etc/xdg/xdg-ubuntu:/etc/xdg
+_ENV["PATH"] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+_ENV["LC_IDENTIFICATION"] => zh_CN.UTF-8
+_ENV["MAKEFLAGS"] => 
+_ENV["GJS_DEBUG_TOPICS"] => JS ERROR;JS LOG
+_ENV["SESSION_MANAGER"] => local/star-A:@/tmp/.ICE-unix/2630,unix/star-A:/tmp/.ICE-unix/2630
+_ENV["TEST_PHP_EXECUTABLE"] => /home/star/Desktop/php-history/php-4/sapi/cli/php
+_ENV["CONTENT_LENGTH"] => 
+_ENV["LESSOPEN"] => | /usr/bin/lesspipe %s
+_ENV["GTK_IM_MODULE"] => fcitx
+_ENV["LC_TIME"] => zh_CN.UTF-8
+
+PHP License
+This program is free software; you can redistribute it and/or modify
+it under the terms of the PHP License as published by the PHP Group
+and included in the distribution in the file:  LICENSE
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+If you did not receive a copy of the PHP license, or have any
+questions about PHP licensing, please contact license@php.net.
