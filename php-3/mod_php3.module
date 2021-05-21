@@ -1,0 +1,7 @@
+Name: php3_module
+ConfigStart
+	RULE_WANTHSREGEX=yes
+	CFLAGS="$CFLAGS -DSERVER_SUBVERSION=\\\"PHP/3.0b6\\\""
+	LIBS="-Lmodules/extra -L../modules/extra -lphp3 -lgdbm  -lgd -lm -ldl -lcrypt                    "
+
+ConfigEnd

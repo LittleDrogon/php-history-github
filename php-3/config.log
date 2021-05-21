@@ -1,0 +1,122 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:601: checking whether build environment is sane
+configure:628: checking whether to enable maintainer-specific portions of Makefiles
+configure:653: checking for bison
+configure:685: checking for gcc
+configure:762: checking whether the C compiler (gcc  ) works
+configure:776: gcc -o conftest    conftest.c  1>&5
+configure:773:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ main(){return(0);}
+ ^~~~
+configure:796: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:801: checking whether we are using GNU C
+configure:825: checking whether gcc accepts -g
+configure:855: checking for ranlib
+configure:883: checking whether gcc and cc understand -c and -o together
+configure:936: checking for perl
+configure:968: checking for sendmail
+configure:1005: checking best dbm library available on system
+configure:1007: checking for dbm_open in -ldbm
+configure:1050: checking for dbm_open in -ldb
+configure:1093: checking for gdbm_open in -lgdbm
+configure:1143: checking for socket in -lc
+configure:1230: checking for gethostbyaddr in -lc
+configure:1317: checking for crypt in -lc
+configure:1356: checking for crypt in -lcrypt
+configure:1404: checking for dlopen in -lc
+configure:1448: checking for dlopen in -ldl
+configure:1496: checking for sin in -lm
+configure:1543: checking for gdImageLine in -lgd
+configure:1589: checking how to run the C preprocessor
+configure:1650: checking for ANSI C header files
+configure:1758: checking for dirent.h that defines DIR
+configure:1796: checking for opendir in -ldir
+configure:1880: checking for fclose declaration
+configure:1889: gcc -c -g -O2  conftest.c 1>&5
+configure:1916: checking for fcntl.h
+configure:1916: checking for unistd.h
+configure:1916: checking for crypt.h
+configure:1916: checking for sys/file.h
+configure:1916: checking for memory.h
+configure:1916: checking for pwd.h
+configure:1916: checking for grp.h
+configure:1916: checking for sys/socket.h
+configure:1916: checking for sys/wait.h
+configure:1916: checking for syslog.h
+configure:1916: checking for string.h
+configure:1916: checking for sys/varargs.h
+configure:1916: checking for stdarg.h
+configure:1916: checking for sys/time.h
+configure:1916: checking for signal.h
+configure:1916: checking for netinet/in.h
+configure:1955: checking for gdbm.h
+configure:2066: checking whether struct tm is in sys/time.h or time.h
+configure:2101: checking for st_blksize in struct stat
+configure:2135: checking for st_blocks in struct stat
+configure:2171: checking for st_rdev in struct stat
+configure:2206: checking for size_t
+configure:2239: checking for uid_t in sys/types.h
+configure:2274: checking for vprintf
+configure:2381: checking for memcpy
+configure:2381: checking for memmove
+configure:2381: checking for strdup
+configure:2381: checking for strerror
+configure:2381: checking for strcasecmp
+configure:2381: checking for strstr
+configure:2381: checking for flock
+configure:2381: checking for lockf
+configure:2381: checking for putenv
+configure:2381: checking for tempnam
+configure:2381: checking for usleep
+configure:2381: checking for setlocale
+configure:2381: checking for gettimeofday
+configure:2381: checking for setvbuf
+configure:2381: checking for srand48
+configure:2381: checking for lrand48
+configure:2381: checking for srandom
+configure:2381: checking for random
+configure:2381: checking for link
+configure:2381: checking for symlink
+configure:2381: checking for regcomp
+configure:2381: checking for getlogin
+configure:2381: checking for cuserid
+configure:2381: checking for vsnprintf
+configure:2381: checking for snprintf
+configure:2381: checking for gcvt
+configure:2381: checking for utime
+configure:2381: checking for crypt
+configure:2381: checking for setitimer
+configure:2381: checking for rint
+configure:2434: checking whether utime accepts a null argument
+configure:2481: checking for working alloca.h
+configure:2514: checking for alloca
+configure:2710: checking for getopt
+configure:2766: checking whether to use bundled regex library
+configure:2799: checking for Apache module support
+configure:2880: checking for Oracle support
+configure:3012: checking for iODBC support
+configure:3050: checking for Adabas support
+configure:3085: checking for Sybase support
+configure:3166: checking for Sybase-CT support
+configure:3203: checking for MySQL support
+configure:3295: checking for mSQL support
+configure:3371: checking for PostgresSQL support
+configure:3410: checking for Solid support
+configure:3467: checking for LDAP support
+configure:3506: checking whether to include the bundled dbase library
+configure:3542: checking whether to include the bundled filePro support
+configure:3574: checking whether to enable unified ODBC support
+configure:3623: checking whether to use a configuration file
+configure:3679: checking whether to include debugging symbols
+configure:3725: checking whether to enable safe mode by default
+configure:3757: checking for safe mode exec dir
+configure:3797: checking whether to enable track_vars variables by default
+configure:3829: checking whether to enable magic quotes by default
+configure:3861: checking whether to enable remote debugger support
+configure:3892: checking whether to enable bc style precision math functions
+configure:3924: checking whether to force Apache CGI redirect
+configure:3959: checking whether to enable a memory limit
+configure:3990: checking whether to enable short tags by default
+configure:4021: checking whether to enable the URL-aware fopen wrapper
