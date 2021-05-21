@@ -1,7 +1,7 @@
 php-history
 
 
-php-1
+php-1：生成几个简单的cgi文件
 
 php-2
 
