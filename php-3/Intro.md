@@ -1,5 +1,6 @@
 php3
-zend engine
+重新写底层
+可以链接mysql
 php-cgi
 
 php_module_start
