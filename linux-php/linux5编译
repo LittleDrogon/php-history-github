@@ -1,0 +1,14 @@
+源码：
+https://gitee.com/mirrors/linux?_from=gitee_search  
+https://gitee.com/mirrors/linux.git
+
+
+make oldconfig
+
+出错修改方法
+https://blog.csdn.net/qq_44761561/article/details/107016271
+
+https://img-blog.csdnimg.cn/20200629110509934.png
+
+FANG._:在.config 中把这个设置设置为空值，重新make9 月前
+FANG._回复:具体点，CONFIG_SYSTEM_TRUSTED_KEYS=""9 月前
